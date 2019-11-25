@@ -1,0 +1,28 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.esofeventsnativescript",
+    "tns-android": {
+      "version": "6.2.0"
+    },
+    "tns-ios": {
+      "version": "6.2.0"
+    }
+  },
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "scripts": {
+    "lint": "eslint \"app/**/*.js\""
+  },
+  "dependencies": {
+    "@nativescript/theme": "~2.2.0",
+    "tns-core-modules": "~6.2.0"
+  },
+  "devDependencies": {
+    "eslint": "~5.8.0",
+    "nativescript-dev-webpack": "~1.3.0",
+    "node-sass": "^4.7.1"
+  },
+  "gitHead": "a6fec076a20f898feabb4466a2c411158c18a100",
+  "readme": "NativeScript Application"
+}
