@@ -5,16 +5,23 @@
                 Note TabStripItem will only accept single Label and/or single Image elements that it
                 will "adopt"; any other layout elements you try to specify will be ignored
             -->
-            <Label text="Home" />
-            <Image src="font://&#xf015;" class="fas t-36" />
+            <Label text="Schedule" />
+            <Image src="font://&#xf073;" class="fas t-36" />
         </TabStripItem>
+        
         <TabStripItem class="navigation__item">
-            <Label text="Browse" />
-            <Image src="font://&#xf1ea;" class="far t-36" />
+            <Label text="Speakers" />
+            <Image src="font://&#xf500;" class="far t-36" />
         </TabStripItem>
+
         <TabStripItem class="navigation__item">
-            <Label text="Search" />
-            <Image src="font://&#xf002;" class="fas t-36" />
+            <Label text="Map" />
+            <Image src="font://&#xf279;" class="fas t-36" />
+        </TabStripItem>
+
+        <TabStripItem class="navigation__item">
+            <Label text="Information" />
+            <Image src="font://&#xf05a;" class="fas t-36" />
         </TabStripItem>
     </TabStrip>
 
@@ -27,6 +34,10 @@
     </TabContentItem>
 
     <TabContentItem>
+        <Frame defaultPage="search/search-page" />
+    </TabContentItem>
+
+      <TabContentItem>
         <Frame defaultPage="search/search-page" />
     </TabContentItem>
 </BottomNavigation>

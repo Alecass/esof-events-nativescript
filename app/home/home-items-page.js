@@ -15,9 +15,9 @@ function onItemTap(args) {
         context: tappedItem,
         animated: true,
         transition: {
-            name: "slide",
-            duration: 200,
-            curve: "ease"
+            name: "slideTop",
+            duration: 300,
+            curve: "cubic-bezier(0.25,0.1,0.25,1))"
         }
     });
 }

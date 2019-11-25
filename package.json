@@ -12,7 +12,8 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "scripts": {
-    "lint": "eslint \"app/**/*.js\""
+    "lint": "eslint \"app/**/*.js\"",
+    "iphone": "tns debug ios --device \"iPhone 11\""
   },
   "dependencies": {
     "@nativescript/theme": "~2.2.0",
