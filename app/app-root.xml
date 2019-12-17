@@ -25,11 +25,11 @@
      <TabContentItem>
         <Frame defaultPage="speakers/speakers-page" />
     </TabContentItem>
-<!--
+
     <TabContentItem>
         <Frame defaultPage="map/map-page" />
     </TabContentItem>
--->
+
     <TabContentItem>
         <Frame defaultPage="information/information-page" />
     </TabContentItem> 
