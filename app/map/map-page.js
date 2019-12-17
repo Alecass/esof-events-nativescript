@@ -22,7 +22,6 @@ function onMapReady(args) {
 
     if (isValidGEOJSON(geoJson)) {
         geoJson.features.forEach(feature => {
-            console.log('feature', feature.geometry.coordinates[0]);
             const marker = new mapsModule.Marker();
             marker.position = mapsModule.Position.positionFromLatLng(
                 feature.geometry.coordinates[1],
