@@ -1,0 +1,35 @@
+<Page
+    class="info"
+    navigatingTo="onNavigatingTo"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar backgroundColor="#ffce00">
+        <Label text="Information"></Label>
+    </ActionBar>
+
+    <StackLayout orientation="vertical">
+        <Image
+            height="135"
+            src="https://www.units.it/sites/default/files/styles/slideshow_1170x425/public/media/immagini/notizie/trieste10.jpg"
+            stretch="aspectFill"
+        />
+        <Label text="ESOF 2020" class="title" fontSize="16" />
+        <StackLayout orientation="horizontal" class="metadata">
+            <Label class="far" text="&#xf133;" fontSize="15" />
+            <Label text="Date" />
+            <Label text="11 06, 2020" />
+        </StackLayout>
+        <StackLayout orientation="horizontal" class="metadata">
+            <Label class="fas" text="&#xf3c5;" fontSize="15" />
+            <Label text="Location" />
+            <Label text="Trieste, Italy" />
+        </StackLayout>
+        <Label text="ESOF2020 Trieste will take place from 5 to 9 July 2020 and in the two weeks preceding and following the main event. The activities include meetings, conferences, seminars and public events such as shows and exhibitions. Over 4000 researchers, educators, business actors, policy makers and journalists from all over the world are expected in Trieste to discuss breakthroughs in science."
+            textWrap="true"
+        />
+
+        <Button class="-outline -rounded-sm" text="Credits" tap="onTap" />
+
+
+    </StackLayout>
+</Page>

@@ -1,0 +1,42 @@
+<Page
+    class="page-speakers"
+    navigatingTo="onNavigatingTo"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar class="speakers">
+        <Label text="Speakers"></Label>
+    </ActionBar>
+
+    <ListView items="{{ items }}">
+        <ListView.itemTemplate>
+            <StackLayout class="cardView" orientation="vertical">
+            <StackLayout class="header" orientation="horizontal">
+                <Image
+                    class="avatar"
+                    src="{{ img }}"
+                    stretch="aspectFill"
+                />
+                <Label fontSize="16" text="{{ nome }}" />
+            </StackLayout>
+            <StackLayout class="content" orientation="vertical">
+                <Label text="{{ interventocompleto }}" textWrap="true" />
+                <StackLayout
+                        class="separator"
+                        height="2"
+                        marginTop="5"
+                        marginBottom="5"
+                        backgroundColor="#bdbdbd"
+                 />
+                <Label text=" {{ desc }}" textWrap="true" />
+                <StackLayout
+                        class="separator"
+                        height="2"
+                        marginTop="5"
+                        marginBottom="5"
+                        backgroundColor="#bdbdbd"
+                 />
+            </StackLayout>
+        </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</Page>

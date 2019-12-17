@@ -1,0 +1,17 @@
+<Page
+    navigatingTo="onNavigatingTo"
+    xmlns:maps="nativescript-google-maps-sdk">
+
+    <ActionBar backgroundColor="#7044ff">
+        <Label text="Map"></Label>
+    </ActionBar>
+
+    <GridLayout>
+        <maps:mapView
+            mapReady="onMapReady"
+            latitude="{{ latitude }}"
+            longitude="{{ longitude }}"
+            zoom="{{ zoom }}"
+        />
+    </GridLayout>
+</Page>

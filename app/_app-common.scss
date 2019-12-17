@@ -1,9 +1,12 @@
 @import "~@nativescript/theme/core";
 @import "~@nativescript/theme/blue";
+@import "./schedule/schedule";
+@import "./speakers/speakers";
+@import "./information/information";
 
 // Place any CSS rules you want to apply on both iOS and Android here.
 // This is where the vast majority of your CSS code goes.
-
+// https://fontawesome.com/icons?d=gallery&m=free
 // Font icon class
 .fab {
     font-family: "Font Awesome 5 Brands", "fa-brands-400";
@@ -43,4 +46,7 @@
         vertical-align: top;
         margin-top: 20%;
     }
+}
+Page {
+    background-color: #f2f2f2;
 }
