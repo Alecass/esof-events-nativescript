@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>540437251305-0088oe6chq5pkjkaelbtqkdgsmvtnt04.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.540437251305-0088oe6chq5pkjkaelbtqkdgsmvtnt04</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAxjQJR3DHNs2c1pGR74Ph2GpO-1c2pPV4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>540437251305</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.nativescript.esofeventsnativescript</string>
+	<key>PROJECT_ID</key>
+	<string>esof-events-f7726</string>
+	<key>STORAGE_BUCKET</key>
+	<string>esof-events-f7726.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:540437251305:ios:3a3ef89ab3f234e179dc78</string>
+	<key>DATABASE_URL</key>
+	<string>https://esof-events-f7726.firebaseio.com</string>
+</dict>
+</plist>

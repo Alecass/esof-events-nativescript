@@ -1,18 +1,34 @@
 const observableModule = require("tns-core-modules/data/observable");
-const data = require('./data')
-const redata = data.map((item) => {
-    item.sub = `${item.inizio} — ${item.fine} ${item.luogo}`
-    return item
-});
+
+const firebase = require("nativescript-plugin-firebase")
+
+let schedule = firebase.firestore.collection("schedule")
+
+const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
+const scheduleData = new ObservableArray(10);
+
+// const redata = data.map((item) => {
+//     item.sub = `${item.inizio} — ${item.fine} ${item.luogo}`
+//     return item
+// });
+
+    schedule.get().then(querySnapshot => {
+    querySnapshot.forEach((doc) => {
+        const items = doc.data()
+        items.sub = `${items.inizio} - ${items.fine} ${items.luogo}`
+        scheduleData.push(items)
+    })
+})
+
+console.log("data", scheduleData)
 
 function ScheduleItemsViewModel() {
     const viewModel = observableModule.fromObject({
-        items: redata,
+        items: scheduleData,
         myGroupingFunc: function(item) {
             return item.group
         }
     });
-
     return viewModel;
 }
 

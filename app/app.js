@@ -6,7 +6,26 @@ if(application.ios) {
     GMSServices.provideAPIKey(MapAPI);
 }
 
+var firebase = require("nativescript-plugin-firebase");
 
+firebase.init({
+    // Optionally pass in properties for database, authentication and cloud messaging,
+    // see their respective docs.
+    
+    iOSEmulatorFlush:true,
+    persist:false
+}).then(
+    function () {
+        console.log("firebase.init done");
+        const schdeule = firebase.firestore.collection("schedule")
+
+        schdeule.get
+    },
+    function (error) {
+        console.log("firebase.init error: " + error);
+    }
+    );
+    
 application.run({ moduleName: "app-root" });
 
 /*

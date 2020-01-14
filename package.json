@@ -19,6 +19,7 @@
   "dependencies": {
     "@nativescript/theme": "~2.2.0",
     "nativescript-google-maps-sdk": "^2.8.1",
+    "nativescript-plugin-firebase": "^10.3.3",
     "nativescript-ui-listview": "^8.0.1",
     "tns-core-modules": "~6.2.0"
   },
