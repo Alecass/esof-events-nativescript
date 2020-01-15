@@ -5,12 +5,8 @@ const firebase = require("nativescript-plugin-firebase")
 let schedule = firebase.firestore.collection("schedule")
 
 const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
-const scheduleData = new ObservableArray(10);
+const scheduleData = new ObservableArray();
 
-// const redata = data.map((item) => {
-//     item.sub = `${item.inizio} — ${item.fine} ${item.luogo}`
-//     return item
-// });
 
     schedule.get().then(querySnapshot => {
     querySnapshot.forEach((doc) => {
