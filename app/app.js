@@ -13,7 +13,13 @@ firebase.init({
     // see their respective docs.
     
     iOSEmulatorFlush:true,
-    persist:false
+    persist:false,
+    // onAuthStateChanged: function(data) {
+    //     console.log(data.loggedIn ? 'Logged' : 'Logged out')
+    //     if(data.loggedIn){
+    //         console.log('USER',user)
+    //     }
+    // }
 }).then(
     function () {
         console.log("firebase.init done");

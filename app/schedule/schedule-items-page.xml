@@ -4,8 +4,14 @@
     xmlns:lv="nativescript-ui-listview">
 
     <ActionBar class="schedule">
-        <Label text="Schedule"></Label>
+        <Label text="{{Logged}}"></Label>
+        <ActionItem tap="showDialog"
+      ios.systemIcon="9" ios.position="right"
+      android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
     </ActionBar>
+
+
+
     <lv:RadListView
         class="myList"
         items="{{ items }}"
