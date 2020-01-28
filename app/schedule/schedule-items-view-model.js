@@ -1,21 +1,21 @@
 const observableModule = require("tns-core-modules/data/observable");
 
-const firebase = require("nativescript-plugin-firebase")
+const firebase = require("nativescript-plugin-firebase");
 
-let schedule = firebase.firestore.collection("schedule")
+let schedule = firebase.firestore.collection("schedule");
 // let currentUser = "not Authenticated"
 
-const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
+const ObservableArray = require("tns-core-modules/data/observable-array")
+    .ObservableArray;
 const scheduleData = new ObservableArray();
 
-
-    schedule.get().then(querySnapshot => {
-    querySnapshot.forEach((doc) => {
-        const items = doc.data()
-        items.sub = `${items.inizio} - ${items.fine} ${items.luogo}`
-        scheduleData.push(items)
-    })
-})
+schedule.get().then(querySnapshot => {
+    querySnapshot.forEach(doc => {
+        const items = doc.data();
+        items.sub = `${items.inizio} - ${items.fine} ${items.luogo}`;
+        scheduleData.push(items);
+    });
+});
 //   function getUser(){
 //     firebase.getCurrentUser().then(result =>{
 //         console.log("current user: " + result)
@@ -23,13 +23,13 @@ const scheduleData = new ObservableArray();
 //     })
 // }
 
-console.log("data", scheduleData)
+console.log("data", scheduleData);
 
 function ScheduleItemsViewModel() {
     const viewModel = observableModule.fromObject({
         items: scheduleData,
         myGroupingFunc: function(item) {
-            return item.group
+            return item.group;
         },
         Logged: false
     });

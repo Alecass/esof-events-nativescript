@@ -19,13 +19,15 @@ const ScheduleItemsViewModel = require("./schedule-items-view-model");
 //     .then(user => console.log("User uidd: " + user.uid))
 //     .catch(error => console.log("Trouble in paradise: " + error));
 
-const viewModel = new ScheduleItemsViewModel()
-viewModel.set('Logged',true)
+const viewModel = new ScheduleItemsViewModel();
+viewModel.set("Logged", true);
 
 function onNavigatingTo(args) {
     const component = args.object;
     component.bindingContext = new ScheduleItemsViewModel();
 }
+
+const fn = firebase.functions.httpsCallable("helloNome");
 
 function showDialog() {
     console.log("LOGIN");
@@ -40,7 +42,7 @@ function showDialog() {
             password: "Password"
         })
         .then(function(r) {
-            if(r.result){
+            if (r.result) {
                 firebase
                     .login({
                         type: firebase.LoginType.PASSWORD,
@@ -55,22 +57,32 @@ function showDialog() {
                             title: "Autenticazione ok",
                             message: `Welcome ${result.email}`,
                             okButtonText: "OK"
-                        })
-                        if(!result.emailVerified){
-                            console.log('emailVerified', result.emailVerified)
+                        });
+                        if (!result.emailVerified) {
+                            console.log("emailVerified", result.emailVerified);
                         }
                     })
                     .catch(err => {
                         alert({
-                            title:'Error',
-                            message:`${err}`,
-                            okButtonText:'OK'
-                        })
+                            title: "Error",
+                            message: `${err}`,
+                            okButtonText: "OK"
+                        });
                     });
-            }else{
-                console.log('cancel')
+            } else {
+                console.log("cancel");
             }
         });
 }
 exports.onNavigatingTo = onNavigatingTo;
 exports.showDialog = showDialog;
+exports.showFunctions = function() {
+    fn("firebase-from-NativeScript").then(mydata => {
+        alert({
+            title: "Firebase function output",
+            message: `${mydata.messaggio}`,
+            okButtonText: "Ok"
+        });
+    });
+    alert("okokok");
+};

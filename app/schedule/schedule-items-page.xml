@@ -8,6 +8,10 @@
         <ActionItem tap="showDialog"
       ios.systemIcon="9" ios.position="right"
       android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
+      
+      <ActionItem tap="showFunctions"
+      ios.systemIcon="8" ios.position="left"
+      android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
     </ActionBar>
 
 
