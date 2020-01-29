@@ -31,7 +31,8 @@ function ScheduleItemsViewModel() {
         myGroupingFunc: function(item) {
             return item.group;
         },
-        Logged: false
+        Logged: false,
+        isCorrect: ""
     });
     return viewModel;
 }
